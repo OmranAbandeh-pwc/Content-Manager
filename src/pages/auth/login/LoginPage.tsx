@@ -1,11 +1,15 @@
-import React from 'react'
+import { useTheme } from "../../../contexts/ThemeContext";
+import Button from "../../../components/common/Button/Button";
+import styles from "./LoginPage.module.scss";
+import AuthCard from "../../../components/AuthCard/AuthCard";
 
 const LoginPage = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div>
-      <h1>LoginPage</h1>
+    <div className={styles.loginContainer}>
+      <AuthCard />
     </div>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

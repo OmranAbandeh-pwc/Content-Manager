@@ -37,11 +37,9 @@ export const AppRoutes: React.FC = () => {
 
         {/* Auth routes - redirect to dashboard if logged in */}
         <Route element={<PublicRoute />}>
-          <Route element={<AuthLayout />}>
-            <Route path={ROUTES.LOGIN} element={<Login />} />
-            {/* <Route path={ROUTES.REGISTER} element={<>Register</>} />
-            <Route path={ROUTES.FORGOT_PASSWORD} element={<>Forgetpass</>} /> */}
-          </Route>
+          <Route path={ROUTES.LOGIN} element={<Login />} />
+          <Route path={ROUTES.REGISTER} element={<>Register</>} />
+          <Route path={ROUTES.FORGOT_PASSWORD} element={<>Forgetpass</>} />
         </Route>
 
         {/* Protected routes with DashboardLayout */}

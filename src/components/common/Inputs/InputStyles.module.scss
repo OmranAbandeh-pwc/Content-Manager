@@ -1,0 +1,37 @@
+@import "../../../styles/variables";
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.labelInput {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--textPrimary);
+}
+
+.textInput {
+  background-color: transparent !important;
+  color: var(--textSecondary);
+  padding: 0.5rem 1rem;
+  height: 60px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border2);
+  &:focus {
+    border-color: var(--borderBlue);
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--textGray1); /* Example: light gray */
+    opacity: 1; /* ensure full visibility */
+  }
+}
+
+.errorMessage {
+  color: var(--error);
+}

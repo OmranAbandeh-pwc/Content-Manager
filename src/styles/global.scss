@@ -1,0 +1,84 @@
+@import './variables';
+
+// Global reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bgPrimary);
+  color: var(--textPrimary);
+  transition: background-color $transition-base, color $transition-base;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  color: var(--textPrimary);
+}
+
+h1 { font-size: $font-size-3xl; }
+h2 { font-size: $font-size-2xl; }
+h3 { font-size: $font-size-xl; }
+h4 { font-size: $font-size-lg; }
+h5 { font-size: $font-size-base; }
+h6 { font-size: $font-size-sm; }
+
+p {
+  margin-bottom: $spacing-md;
+  color: var(--textPrimary);
+}
+
+a {
+  color: var(--primaryMain);
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--primaryDark);
+  }
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bgSecondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: $radius-full;
+
+  &:hover {
+    background: var(--textDisabled);
+  }
+}
+
+// Selection
+::selection {
+  background-color: var(--primaryLight);
+  color: var(--primaryContrast);
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid var(--primaryMain);
+  outline-offset: 2px;
+}

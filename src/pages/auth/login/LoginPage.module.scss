@@ -1,0 +1,20 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  .authContainer{
+    height: 400px;
+    width: 400px;
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgb(214, 214, 214);
+
+    .authSwitchButtonBox{
+      display: flex;
+      background-color: #667eea;
+    }
+  }
+}
