@@ -1,0 +1,80 @@
+@import "../../../styles/variables";
+
+.textButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// Variants
+.primary {
+  color: var(--primaryMain);
+
+  &:hover:not(:disabled) {
+    color: var(--primaryDark);
+  }
+
+  &:active:not(:disabled) {
+    color: var(--primaryDark);
+    transform: scale(0.98);
+  }
+}
+
+.secondary {
+  color: var(--textSecondary);
+
+  &:hover:not(:disabled) {
+    color: var(--textPrimary);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}
+
+.danger {
+  color: var(--error);
+
+  &:hover:not(:disabled) {
+    color: #e53e3e;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}
+
+// Sizes
+.sm {
+  font-size: 13px;
+}
+
+.md {
+  font-size: 14px;
+}
+
+.lg {
+  font-size: 16px;
+}
+
+// Underline option
+.underline {
+  text-decoration: underline;
+
+  &:hover:not(:disabled) {
+    text-decoration: none;
+  }
+}

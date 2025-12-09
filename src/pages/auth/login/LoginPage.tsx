@@ -1,12 +1,12 @@
-import { useTheme } from "../../../contexts/ThemeContext";
-import Button from "../../../components/common/Button/Button";
+
 import styles from "./LoginPage.module.scss";
 import AuthCard from "../../../components/AuthCard/AuthCard";
+import FeatureCard from "../../../components/FeatureCard/FeatureCard";
 
 const LoginPage = () => {
-  const { theme, toggleTheme } = useTheme();
   return (
     <div className={styles.loginContainer}>
+      <FeatureCard/>
       <AuthCard />
     </div>
   );

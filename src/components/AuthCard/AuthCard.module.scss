@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  
   box-shadow: 0 0 10px 0 var(--textLightGray);
 
   .authSwitchButtonBox {
@@ -29,9 +30,29 @@
     }
   }
 
+  .authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   .inputsContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .submitBtn {
+    height: 60px;
+    font-size: 20px;
+    &:hover {
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+    }
+  }
+  .forgotPasswordContainer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    .forgotPasswordButton {
+      font-size: 18px;
+    }
   }
 }

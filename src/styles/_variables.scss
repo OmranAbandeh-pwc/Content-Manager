@@ -27,6 +27,7 @@
   --textGray: #4b5563;
   --textLightGray: #d6d6d6;
   --textGray1: #a9a9a9;
+  --textGray2: #6b7280;
   --textBlue: #2563eb;
 
   // Status Colors
@@ -67,8 +68,9 @@ $radius-xl: 16px;
 $radius-full: 9999px;
 
 // Typography
-$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-$font-family-mono: 'Courier New', monospace;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", sans-serif;
+$font-family-mono: "Courier New", monospace;
 
 $font-size-xs: 12px;
 $font-size-sm: 14px;
