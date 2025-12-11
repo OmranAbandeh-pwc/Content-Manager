@@ -1,0 +1,18 @@
+
+
+
+CREATE COLLECTIONS TABLE :
+
+
+CREATE TABLE collections (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  project_id INT NOT NULL,
+  collection_name VARCHAR(150) NOT NULL,
+  description TEXT,
+  collection_type ENUM('API', 'WEB') NOT NULL,
+  status ENUM('ACTIVE', 'ARCHIVED') DEFAULT 'ACTIVE',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  last_run_date DATETIME NULL,
+  FOREIGN KEY (project_id) REFERENCES projects(id)
+);

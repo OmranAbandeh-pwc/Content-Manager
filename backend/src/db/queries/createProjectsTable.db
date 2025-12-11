@@ -1,0 +1,27 @@
+
+
+
+CREATE PROJECTS TABLE :
+
+CREATE TABLE projects (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  project_name VARCHAR(150) NOT NULL,
+  description TEXT,
+  project_type ENUM('API', 'WEB', 'BOTH') NOT NULL DEFAULT 'API',
+  status ENUM('ACTIVE', 'ARCHIVED') DEFAULT 'ACTIVE',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  last_test_date DATETIME NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-----------------------------------------------------------------------------------------------
+
+INSERT INTO PROJECTS :
+
+INSERT INTO projects (user_id, project_name, description, project_type, status, last_test_date)
+VALUES
+(1, 'Weather API', 'An API project that provides real-time weather data.', 'API', 'ACTIVE', '2025-10-09 10:00:00'),
+(1, 'Portfolio Website', 'A personal portfolio showcasing frontend projects.', 'WEB', 'ACTIVE', '2025-10-08 15:30:00'),
+(1, 'Full Stack App', 'A full stack app combining API and frontend layers.', 'BOTH', 'ARCHIVED', '2025-10-07 12:00:00');
