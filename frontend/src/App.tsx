@@ -3,6 +3,7 @@ import { AppRoutes } from "./routes/AppRoutes";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
+
 function App() {
   return (
     <BrowserRouter>
